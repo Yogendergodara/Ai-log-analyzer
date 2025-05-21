@@ -42,8 +42,8 @@ It supports intelligent log parsing with **regex**, smart structuring of data, a
 
 ### 1. Clone the Repository
 
-git clone https://github.com/your-username/ai-log-analyzer.git
-cd ai-log-analyzer
+git clone https://github.com/Yogendergodara/Ai-log-analyzer.git
+cd Ai-log-analyzer
 
 
 2. Install Requirements
@@ -59,7 +59,7 @@ streamlit run loganalyzer_app.py
 
 📁 Folder Structure
 
-ai-log-analyzer/
+Ai-log-analyzer/
 ├── loganalyzer_app.py        # Main Streamlit app
 ├── requirements.txt          # Python dependencies
 ├── README.md                 # Project guide
