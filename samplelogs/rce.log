@@ -1,0 +1,16 @@
+192.168.1.150 - - [13/Mar/2025:18:05:12 +0000] "POST /upload.php HTTP/1.1" 200 512 "User-Agent: Mozilla/5.0"
+Mar 13 18:05:30 server webapp[4521]: [WARNING] Suspicious file upload detected: shell.php
+Mar 13 18:06:45 server apache[5678]: [INFO] Executing request: GET /uploads/shell.php?cmd=whoami
+Mar 13 18:06:47 server kernel: [ 6789.456123] Possible Remote Code Execution attempt from IP 192.168.1.150
+Mar 13 18:07:15 server apache[5678]: [INFO] Executing request: GET /uploads/shell.php?cmd=id
+Mar 13 18:07:25 server apache[5678]: [INFO] Executing request: GET /uploads/shell.php?cmd=cat /etc/shadow
+Mar 13 18:07:27 server kernel: [ 6792.123456] ACCESS DENIED: User www-data attempted to read /etc/shadow
+Mar 13 18:07:40 server apache[5678]: [INFO] Executing request: GET /uploads/shell.php?cmd=cat /etc/passwd
+Mar 13 18:08:12 server kernel: [ 6795.987654] SUCCESS: User www-data accessed /etc/passwd
+Mar 13 18:09:30 server sudo[7890]: www-data : TTY=unknown ; PWD=/var/www/html ; COMMAND=/bin/bash
+Mar 13 18:09:45 server kernel: [ 6800.123789] PRIVILEGE ESCALATION: www-data -> root via sudo misconfiguration
+Mar 13 18:10:12 server audit[8901]: USER_MOD pid=8901 uid=0 auid=1001 msg='op=change-password id=1002 exe="/usr/sbin/usermod"'
+Mar 13 18:10:15 server passwd[9023]: Password for user 'johndoe' changed successfully
+Mar 13 18:10:20 server audit[9023]: Password of 'johndoe' changed from 'johndoe@8893' to 'HACKER$$99'
+Mar 13 18:11:00 server sshd[9999]: Accepted password for johndoe from 192.168.1.150 port 56789 ssh2
+Mar 13 18:11:30 server audit[10023]: ROOT LOGIN detected from 192.168.1.150
