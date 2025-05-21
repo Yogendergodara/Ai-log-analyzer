@@ -6,7 +6,7 @@ import json
 import datetime
 
 # ---------------------------- CONFIG ----------------------------
-API_KEY = "AIzaSyCds1rxRCLW15nPst_jB4VAc5KsGTG-2VM"  # Replace with your actual Gemini API key
+API_KEY = "Enter API Key"  # Replace with your actual Gemini API key
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("gemini-1.5-pro")
 HISTORY_FILE = "history/analysis_log.json"
